@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 import Intro from './components/Intro'
 
 
-const Map = dynamic(() => import('./components/Map'), { ssr: false })
+const Map = dynamic(() => import('./components/FantasyMap'), { ssr: false })
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('map')
