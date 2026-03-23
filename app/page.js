@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import dynamic from 'next/dynamic'
+import Intro from './components/Intro'
 
 const Map = dynamic(() => import('./components/Map'), { ssr: false })
 
@@ -12,6 +13,7 @@ export default function Home() {
   const [form, setForm] = useState({ username: '', email: '', password: '' })
   const [loading, setLoading] = useState(false)
   const [showWelcome, setShowWelcome] = useState(false)
+  const [showIntro, setShowIntro] = useState(true)
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value })
