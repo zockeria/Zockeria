@@ -37,6 +37,9 @@ export default function Home() {
     { id: 'ranking', icon: '🏆', label: 'Rang' },
     { id: 'profile', icon: '👤', label: 'Profil' },
   ]
+  if (showIntro) {
+    return <Intro onFinish={() => setShowIntro(false)} />
+  }
 
   // ── WILLKOMMENS-SCREEN ──────────────────────────────────────
   if (showWelcome) {
